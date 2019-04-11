@@ -9,6 +9,8 @@
 
 
 
-michael = Employee.create(name: 'michael')
+dolma = Employee.create(name: 'dolma')
+
+issue = Issue.create(title: 'server stuff')
 
 assignment = Assignment.create(title: 'server issues', employee_id: 2, issue_id: 1)
