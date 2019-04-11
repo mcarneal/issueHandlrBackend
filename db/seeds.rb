@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
+
+michael = Employee.create(name: 'michael')
+
+assignment = Assignment.create(title: 'server issues', employee_id: 2, issue_id: 1)
