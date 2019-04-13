@@ -6,4 +6,7 @@ class Employee < ApplicationRecord
   validates :username, uniqueness:{case_sensitive: false}
 
 
+
 end
+
+Employee.create({name: 'a', employeeNo: 2000, role: "boss", username: 'a', password: 'a'})

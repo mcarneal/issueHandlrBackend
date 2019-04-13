@@ -1,5 +1,5 @@
 class EmployeeSerializer < ActiveModel::Serializer
-  attributes :id, :name, :employeeNo, :role, :issues, :username
+  attributes :id, :name, :employeeNo, :role, :issues, :username, :password
 
 
   def issues

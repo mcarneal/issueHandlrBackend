@@ -22,7 +22,7 @@ class Api::V1::EmployeesController < ApplicationController
 
   private
   def employee_params
-    params.require(:employee).permit(:username, :password, :name, :employeeNo, :role)
+    params.require(:employee).permit(:username, :Password, :name, :employeeNo, :role)
   end
 
 end
