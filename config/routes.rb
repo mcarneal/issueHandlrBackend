@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         # post '/signup', to: 'employees#create'
         get '/profile', to: 'employees#profile'
         get '/get_employee', to: 'employees#get_employee'
+        post 'login', to: 'employees#login'
     end
   end
 end

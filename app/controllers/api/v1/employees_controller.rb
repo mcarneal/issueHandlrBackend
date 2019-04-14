@@ -20,6 +20,18 @@ class Api::V1::EmployeesController < ApplicationController
     end
   end
 
+  def login
+    @employee = Employee.find_by(username: employee_params['username'])
+    enc = @employee.password_digest
+    sec = employee_params['password']
+    if BCrypt::Password.new(enc) == sec
+      token = JWT.encode({employee_id: @employee.id}, "secret")
+      render json: { username: @employee.username, token: token}, status: :created
+    else
+        render json: { error: 'failed to create employee' }, status: :not_acceptable
+    end
+  end
+
   def get_employee
     token = request.headers["authorization"]
     id = JWT.decode(token, 'secret')[0]["employee_id"]
