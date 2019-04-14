@@ -12,17 +12,27 @@ class Api::V1::EmployeesController < ApplicationController
 
   def create
     @employee = Employee.create(employee_params)
-    byebug
     if @employee.valid?
-      render json: { employee: EmployeeSerializer.new(@employee) }, status: :created
+      token = JWT.encode({employee_id: @employee.id}, "secret")
+      render json: { username: @employee.username, token: token}, status: :created
     else
       render json: { error: 'failed to create employee' }, status: :not_acceptable
     end
   end
 
+  def get_employee
+    token = request.headers["authorization"]
+    id = JWT.decode(token, 'secret')[0]["employee_id"]
+    @employee = Employee.find(id)
+    if @employee.valid?
+      token = JWT.encode({employee_id: @employee.id}, "secret")
+      render json: { username: @employee.username}, status: :created
+    end
+  end
+
   private
   def employee_params
-    params.require(:employee).permit(:username, :Password, :name, :employeeNo, :role)
+    params.require(:employee).permit(:username, :password, :name, :employeeNo, :role)
   end
 
 end
