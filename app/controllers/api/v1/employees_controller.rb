@@ -14,7 +14,7 @@ class Api::V1::EmployeesController < ApplicationController
     @employee = Employee.create(employee_params)
     if @employee.valid?
       token = JWT.encode({employee_id: @employee.id}, ENV['SECRET_WORD'])
-      render json: { username: @employee.username, token: token}, status: :created
+      render json: { username: @employee.username, token: token, id: @employee.id}, status: :created
     else
       render json: { error: 'failed to create employee' }, status: :not_acceptable
     end
@@ -38,7 +38,7 @@ class Api::V1::EmployeesController < ApplicationController
     @employee = Employee.find(id)
     if @employee.valid?
       token = JWT.encode({employee_id: @employee.id}, ENV['SECRET_WORD'])
-      render json: { username: @employee.username}, status: :created
+      render json: { username: @employee.username, id: @employee.id}, status: :created
     end
   end
 
