@@ -8,5 +8,3 @@ class Employee < ApplicationRecord
 
 
 end
-
-Employee.create({name: 'a', employeeNo: 2000, role: "boss", username: 'a', password: 'a'})

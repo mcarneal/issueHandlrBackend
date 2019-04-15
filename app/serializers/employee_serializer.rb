@@ -5,4 +5,5 @@ class EmployeeSerializer < ActiveModel::Serializer
   def issues
     self.object.issues
   end
+
 end
