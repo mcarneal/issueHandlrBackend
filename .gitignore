@@ -19,7 +19,7 @@
 
 .byebug_history
 
-secret.rb
+
 .env
 
 # Ignore master key for decrypting credentials and more.
