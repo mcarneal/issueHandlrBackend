@@ -34,7 +34,7 @@ class Api::V1::EmployeesController < ApplicationController
 
   def get_employee
     token = request.headers["authorization"]
-    id = JWT.decode(token, 'secret')[0]["employee_id"]
+    id = JWT.decode(token, ENV['SECRET_WORD'])[0]["employee_id"]
     @employee = Employee.find(id)
     if @employee.valid?
       token = JWT.encode({employee_id: @employee.id}, ENV['SECRET_WORD'])
