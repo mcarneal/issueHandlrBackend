@@ -7,72 +7,29 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-#
-#
-# dolma = Employee.create(name: 'dolma', employeeNo: 2001, role: "junior developer")
-# michael = Employee.create(name: 'michael', employeeNo: 2002, role: "junior developer")
-# elizabeth = Employee.create(name: 'elizabeth', employeeNo: 2003, role: "junior developer")
-# brianna = Employee.create(name: 'brianna', employeeNo: 2004, role: "junior developer")
-# dana = Employee.create(name: 'dana', employeeNo: 2005, role: "junior developer")
-# matt = Employee.create(name: 'matt', employeeNo: 2006, role: "junior developer")
-#
-
-issue = Issue.create(title: 'server stuff', category: 'Network', description: 'this is a generic description while we seed our database.')
-issue = Issue.create(title: 'screen of laptop is broken', category: 'Hardware' , description: 'this is a generic description while we seed our database.')
-issue = Issue.create(title: 'debug the project', category: 'Software', description: 'this is a generic description while we seed our database.')
-issue = Issue.create(title: 'home page keeps crashing', category: 'Software', description: 'this is a generic description while we seed our database.')
-# issue = Issue.create(title: '404 error on product show page', category: 'Software', description: 'this is a generic description while we seed our database.')
-# issue = Issue.create(title: 'infinite loop on my profile', category: 'category', description: 'this is a generic description while we seed our database.')
 
 #
-assignment = Assignment.create(title: 'server issues', employee_id: 1, issue_id: 5, description: 'When accessing the admin network packets are being dropped.')
-assignment = Assignment.create(title: 'Check Display Cables', employee_id: 1, issue_id: 6, description: 'this is a generic description while we seed our database.')
-assignment = Assignment.create(title: 'check homepage backend route', employee_id: 2, issue_id: 7, description: 'this is a generic description while we seed our database.')
-assignment = Assignment.create(title: 'server issues', employee_id: 2, issue_id: 8, description: 'After checking network config, all settings are correct. Check cableing leading from patch panel')
-assignment = Assignment.create(title: 'server issues', employee_id: 2, issue_id: 9, description: 'Possible russian interference? Consult Congress')
-# assignment = Assignment.create(title: 'server issues', employee_id: 1, issue_id: 3, description: 'this is a generic description while we seed our database.')
-# assignment = Assignment.create(title: 'server issues', employee_id: 1, issue_id: 1, description: 'this is a generic description while we seed our database.')
-# assignment = Assignment.create(title: 'server issues', employee_id: 1, issue_id: 1, description: 'this is a generic description while we seed our database.')
-# assignment = Assignment.create(title: 'server issues', employee_id: 1, issue_id: 1, description: 'this is a generic description while we seed our database.')
+issue = Issue.create(title: 'Russian is at it again', category: 'Network', description: 'Access to the Accounting network appears to be offline, please investigate.', status: 0)
+issue = Issue.create(title: 'Macbook bite me', category: 'Hardware' , description: 'my macbook attacked me while i was working the other day.', status: 0)
+issue = Issue.create(title: 'North Korea Hacked up', category: 'Software', description: 'these 404s are fgiving me anxiety', status: 0)
+issue = Issue.create(title: 'I got hacked......again', category: 'Software', description: 'My dog snuggles at my iphone and now i cant send or recieve texts', status: 0)
 
-# issue = Issue.create(title: 'server stuff', category: 'Network', description: 'this is a generic description while we seed our database.')
-# issue = Issue.create(title: 'screen of laptop is broken', category: 'Hardware' , description: 'this is a generic description while we seed our database.')
-# issue = Issue.create(title: 'debug the project', category: 'Software', description: 'this is a generic description while we seed our database.')
-# issue = Issue.create(title: 'home page keeps crashing', category: 'Software', description: 'this is a generic description while we seed our database.')
-# issue = Issue.create(title: '404 error on product show page', category: 'Software', description: 'this is a generic description while we seed our database.')
-# issue = Issue.create(title: 'infinite loop on my profile', category: 'category', description: 'this is a generic description while we seed our database.')
-#
-# # assignment = Assignment.create(title: 'server issues', employee_id: 7, issue_id: 7, description: 'this is a generic description while we seed our database.')
-#
-# assignment = Assignment.create(title: 'server issues', employee_id: 8, issue_id: 16 , description: 'this is a generic description while we seed our database.')
-assignment = Assignment.create(title: 'server issues', employee_id: 16, issue_id: 16 , description: 'this is a generic description while we seed our database.')
-assignment = Assignment.create(title: 'network issues', employee_id: 16, issue_id: 7 , description: 'this is a generic description while we seed our database.')
-assignment = Assignment.create(title: 'chocolate issues', employee_id: 16, issue_id: 9 , description: 'this is a generic description while we seed our database.')
-assignment = Assignment.create(title: 'server issues', employee_id: 16, issue_id: 11 , description: 'this is a generic description while we seed our database.')
 
-# assignment = Assignment.create(title: 'server issues', employee_id: 9, issue_id: 8, description: 'this is a generic description while we seed our database.')
+issue1 = Issue.create(title: "All the viruses", description: "I have to many viruses on my computer and now i cant go anywhere", category: "Hardware", status: 0)
 
-# assignment = Assignment.create(title: 'server issues', employee_id: 9, issue_id: 9, description: 'this is a generic description while we seed our database.')
+issue2 = Issue.create(title: "Camera of the phone is not working", description: "camera is blurr and sometime it doesnot work at all", category: "Hardware", status: 0)
 
-# assignment = Assignment.create(title: 'server issues', employee_id: 10, issue_id: 9, description: 'this is a generic description while we seed our database.')
+issue3 = Issue.create(title: "Server down", description: "Volume went down in the middle of a video and can't access the volume since then", category: "whatever", status: 0,)
 
-# assignment = Assignment.create(title: 'server issues', employee_id: 11, issue_id: 10, description: 'this is a generic description while we seed our database.')
-# assignment = Assignment.create(title: 'server issues', employee_id: 12, issue_id: 11, description: 'this is a generic description while we seed our database.')
+issue4 = Issue.create(title: "laptop shutdown", description: "Laptop not working at all", category: "whatever", status: 0)
 
-# assignment = Assignment.create(title: 'server issues', employee_id: 7, issue_id: 12, description: 'this is a generic description while we seed our database.')
 
-# assignment = Assignment.create(title: 'server issues', employee_id: 8, issue_id: 17, description: 'this is a generic description while we seed our database.')
-
-# assignment = Assignment.create(title: 'server issues', employee_id: 9, issue_id: 12, description: 'this is a generic description while we seed our database.')
-
-# assignment = Assignment.create(title: 'server issues', employee_id: 10, issue_id: 12, description: 'this is a generic description while we seed our database.')
-
-# assignment = Assignment.create(title: 'server issues', employee_id: 11, issue_id: 12, description: 'this is a generic description while we seed our database.')
-
-# assignment = Assignment.create(title: 'server issues', employee_id: 8, issue_id: 18, description: 'this is a generic description while we seed our database.')
-#
-# assignment = Assignment.create(title: 'server issues', employee_id: 8, issue_id: 19, description: 'this is a generic description while we seed our database.')
-#
-# assignment = Assignment.create(title: 'server issues', employee_id: 10, issue_id: 20, description: 'this is a generic description while we seed our database.')
-
-# assignment = Assignment.create(title: 'server issues', employee_id: 11, issue_id: 10, description: 'this is a generic description while we seed our database.')
+# assignment = Assignment.create(title: 'Volume on laptop', employee_id: 1, issue_id: 13 , description: 'Check if issue persists in a known good user enviroment')
+# assignment = Assignment.create(title: 'Facetime', employee_id: 1, issue_id: 10 , description: 'Check permissions setting to verfiy camera is accessible.')
+# assignment = Assignment.create(title: 'Core Server down', employee_id: 2, issue_id: 14 , description: 'Main switch is down on the core server, check response.')
+# assignment = Assignment.create(title: 'No power, dead unit', employee_id: 2, issue_id: 15 , description: 'Reset power supply')
+# assignment = Assignment.create(title: 'All the viruses', employee_id: 2, issue_id: 16 , description: 'Check power supply then move to logic board')
+# assignment = Assignment.create(title: 'Show Page not loading', employee_id: 1, issue_id: 7 , description: 'Show page loads to 20 errors. Begin debug process.')
+# assignment = Assignment.create(title: 'Show Page not loading', employee_id: 2, issue_id: 7 , description: 'After Show page is debugged check backend settings for errors.')
+# assignment = Assignment.create(title: 'Null employee number', employee_id: 2, issue_id: 8 , description: 'Check params of employee when new instance is being generated')
+# # assignment = Assignment.create(title: 'Null employee number', employee_id: 1, issue_id: 8 , description: 'Inspect validations and research front end')
