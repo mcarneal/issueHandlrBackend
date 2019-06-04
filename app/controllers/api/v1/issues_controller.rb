@@ -6,15 +6,21 @@ class Api::V1::IssuesController < ApplicationController
 
   end
 
-  # def show
-  #   @issue = Issue.find(params[:id])
-  #   render json: @issue
-  # end
+  def create
+    @issue = Issue.create(issue_params)
+    render json: @issue
+  end 
 
   def destroy
     @issue = Issue.find(params[:id])
     @issue.destroy
     render json: @issue
+  end
+
+  private
+
+  def issue_params
+    params.require(:issue).permit(:title, :description, :category)
   end
 
 end

@@ -14,7 +14,7 @@ class Api::V1::EmployeesController < ApplicationController
     @employee = Employee.create(employee_params)
     if @employee.valid?
       token = JWT.encode({employee_id: @employee.id}, ENV['SECRET_WORD'])
-      render json: { username: @employee.username, token: token, id: @employee.id}, status: :created
+      render json: { username: @employee.username, token: token, id: @employee.id, employeeNo: @employee.employeeNo, issues: @employee.issues, name: @employee.name, role: @employee.role}, status: :created
     else
       render json: { error: 'failed to create employee' }, status: :not_acceptable
     end
@@ -26,7 +26,7 @@ class Api::V1::EmployeesController < ApplicationController
     sec = employee_params['password']
     if BCrypt::Password.new(enc) == sec
       token = JWT.encode({employee_id: @employee.id}, ENV['SECRET_WORD'])
-      render json: { username: @employee.username, token: token, id: @employee.id}, status: :created
+      render json: { username: @employee.username, token: token, id: @employee.id, role: @employee.role}, status: :created
     else
         render json: { error: 'failed to create employee' }, status: :not_acceptable
     end
@@ -38,7 +38,7 @@ class Api::V1::EmployeesController < ApplicationController
     @employee = Employee.find(id)
     if @employee.valid?
       token = JWT.encode({employee_id: @employee.id}, ENV['SECRET_WORD'])
-      render json: { username: @employee.username, id: @employee.id}, status: :created
+      render json: { username: @employee.username, id: @employee.id, role: @employee.role}, status: :created
     end
   end
 
