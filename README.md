@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
 
-* Ruby version
+IssueHandlr Backend 
 
-* System dependencies
+Ruby version 2.5.2
 
-* Configuration
+bundler version 1.17.3
 
-* Database creation
+run bundle install after repo has been cloned.
 
-* Database initialization
+create a .env file for the JWT token SECRET_WORD.
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
